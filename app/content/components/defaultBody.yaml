@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: defaultBody
+name: Default Body
+icon: menu-boxed
+parameters:
+  - id: contentId
+    name: Content ID
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-04-05T13:04:06.148097+00:00'
+updated: '2023-04-05T13:04:06.148097+00:00'
