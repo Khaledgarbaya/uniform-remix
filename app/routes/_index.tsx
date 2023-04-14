@@ -1,4 +1,4 @@
-import { json, V2_MetaFunction } from '@remix-run/cloudflare'
+import { json, V2_MetaFunction } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
 import { UniformComposition } from '@uniformdev/canvas-react'
 import LayoutCanvas from '~/components/LayoutCanvas'

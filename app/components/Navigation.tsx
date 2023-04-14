@@ -9,6 +9,7 @@ export default function Navigation({
     fields: { title: string; description: string }
   }[]
 }) {
+  if (!content) return null
   const links = content.filter((c) => c.url)
   return (
     <div>

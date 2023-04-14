@@ -1,4 +1,4 @@
-import { json, LoaderArgs, V2_MetaFunction } from '@remix-run/cloudflare'
+import { json, LoaderArgs, V2_MetaFunction } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
 import Layout from '~/components/Layout'
 import content from '../content/content.json'
