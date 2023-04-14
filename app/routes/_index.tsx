@@ -1,4 +1,4 @@
-import { json, V2_MetaFunction } from '@remix-run/node'
+import { json, LoaderArgs, V2_MetaFunction } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
 import { UniformComposition } from '@uniformdev/canvas-react'
 import LayoutCanvas from '~/components/LayoutCanvas'
@@ -12,8 +12,9 @@ export const meta: V2_MetaFunction = ({ data }) => {
   return [{ title: data.fields.title }]
 }
 
-export async function loader() {
-  const slug = '/'
+export async function loader({ request }: LoaderArgs) {
+  const url = new URL(request.url)
+  const slug = url.searchParams.get('slug') || '/'
   const topic = content.find((e) => e.url == slug)
   if (!topic) {
     throw new Response('Not Found', {
